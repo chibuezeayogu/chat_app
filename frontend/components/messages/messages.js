@@ -4,7 +4,7 @@ import "./messages.pcss";
 
 const scrollToButton = (element) => {
   // eslint-disable-next-line
-  return (element.scrollTop = element.scrollheight);
+  element.scrollTop = element.scrollheight;
 };
 
 const messages = document.querySelector(".js-messages");
@@ -15,7 +15,7 @@ if (messages) {
   scrollToButton(content);
 
   setCallback((message) => {
-    content.insertAdjacentElement("beforeend", message);
+    content.insertAdjacentHTML("beforeend", message);
 
     scrollToButton(content);
   });
