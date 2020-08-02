@@ -1,6 +1,6 @@
 <div class="chat">
   <div class="chat--messages">
-    <%= c("messages", messages: messages)%>
+    <%= c("messages", { messages: messages, current_user: current_user })%>
   </div>
   <div class="chat--form">
     <%= c("message-form")%>
